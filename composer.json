@@ -1,0 +1,64 @@
+{
+  "name": "ufo-tech/rpc-statistics-bundle",
+  "description": "rpc-statistics-bundle is a Symfony bundle for collecting and analyzing JSON-RPC method call statistics, including duration, statuses, and request metadata.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Valik Nikolaev",
+      "email": "valiknik225@gmail.com"
+    },
+    {
+      "name": "Alex Maystrenko",
+      "email": "ashterix69@gmail.com"
+    }
+  ],
+  "type": "symfony-bundle",
+  "homepage": "https://docs.ufo-tech.space/bin/view/docs/JsonRpcBundle/?language=en",
+  "keywords": [
+    "ufo",
+    "symfony",
+    "api",
+    "bundle",
+    "json-rpc",
+    "async"
+  ],
+  "require": {
+    "php": ">=8.3",
+    "symfony/framework-bundle": "^7.2",
+    "symfony/http-client": "^7.2",
+    "symfony/process": "^7.2",
+    "ufo-tech/json-rpc-bundle": "^8",
+    "ufo-tech/rpc-objects": "^3",
+    "ufo-tech/rpc-exceptions": "^1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ufo\\RPCStatistics\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Ufo\\RPCStatistics\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    },
+    "symfony": {
+      "endpoint": [
+        "https://api.github.com/repos/ufo-tech/recipes/contents/index.json?ref=main"
+      ]
+    }
+  },
+  "scripts": {
+    "auto-scripts": {
+      "cache:clear": "symfony-cmd",
+      "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
+    }
+  }
+}
